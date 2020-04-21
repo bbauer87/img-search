@@ -1,8 +1,8 @@
 # Image searching using width and/or height
-Use Python to search image files in specific folder or throught all sub-directories. It can find all image formats supported by PIL. For more information about this: https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html
+Use Python to search image files in specific folder or throught all sub-directories. It can find all image formats supported by Pillow. For more information about this: https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html
 
 # Requirements
-Python 3 + PIL
+Python 3 + Pillow
 
 # How to use?
 1 - Select if searching in specific folder or in recursive mode;
