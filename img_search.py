@@ -28,7 +28,7 @@ def specific(mydir,what_to_search,operation,extention,var_wid=0,var_hei=0):
     if what_to_search == "width and height": ## operation[0] width, operation[1] height
         print(f"\nSearching for {extention} files with width {operation[0]} {var_wid} and height {operation[1]} {var_hei}:\n")
         for file in os.listdir(mydir):
-            if file.endswith(f".{extention}".lower()):
+            if file.lower().endswith(f".{extention}"):
                 search = verif(mydir+"\\"+file)
                 if operation[0] == operation[1] == "equal":
                     if search[0] == var_wid and search[1] == var_hei:
@@ -221,7 +221,7 @@ def specific(mydir,what_to_search,operation,extention,var_wid=0,var_hei=0):
         print(f"\nSearching for {extention} files with {string}:\n")
         
         for file in os.listdir(mydir):
-            if file.endswith(f".{extention}".lower()):
+            if file.lower().endswith(f".{extention}"):
                 search = verif(mydir + "\\" + file)   
                 if what_to_search == "width":
                     param = search[0]; comparison = var_wid
@@ -270,7 +270,7 @@ def recursive(mydir,what_to_search,operation,extention,var_wid=0,var_hei=0):
         print(f"\nSearching for {extention} files with width {operation[0]} {var_wid} and height {operation[1]} {var_hei}:\n")
         for root, dirs, files in os.walk(mydir):
             for file in files:
-                if file.endswith(f".{extention}".lower()):
+                if file.lower().endswith(f".{extention}"):
                      search = verif(root + "\\" + file)
                      if operation[0] == operation[1] == "equal":
                         if search[0] == var_wid and search[1] == var_hei:
@@ -464,7 +464,7 @@ def recursive(mydir,what_to_search,operation,extention,var_wid=0,var_hei=0):
         
         for root, dirs, files in os.walk(mydir):
             for file in files:
-                if file.endswith(f".{extention}".lower()):
+                if file.lower().endswith(f".{extention}"):
                     search = verif(root + "\\" + file)               
                     if what_to_search == "width":
                         param = search[0]; comparison = var_wid
